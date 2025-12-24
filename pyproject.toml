@@ -1,6 +1,6 @@
 [tool.ruff]
 line-length = 120
-select = ["E", "F", "W", "I"] # Error, Failure, Warning, Import Sort
+select = ["E", "F", "W", "I"] # Warning, Import Sort
 
 [tool.black]
 line-length = 120
