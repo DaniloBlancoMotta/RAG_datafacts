@@ -1,5 +1,5 @@
 services:
-  # Serviço principal da API
+  # Serviço  API
   api:
     build: .
     command: uvicorn app.api:app --host 0.0.0.0 --port 8000
@@ -8,15 +8,15 @@ services:
     env_file:
       - .env
     volumes:
-      - ./chroma_db:/app/chroma_db # Persistência do VectorDB
-      - ./data:/app/data # Mapeia PDFs locais
+      - ./chroma_db:/app/chroma_db 
+      - ./data:/app/data 
 
-  # Serviço utilitário para rodar a ingestão (ETL)
+  # (ETL)
   ingestor:
     build: .
     command: python app/ingest.py
     env_file:
       - .env
     volumes:
-      - ./chroma_db:/app/chroma_db # Escreve no mesmo volume da API
+      - ./chroma_db:/app/chroma_db # volume da API
       - ./data:/app/data # Lê os PDFs
