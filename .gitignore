@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+ENV/
+env/
+build/
+dist/
+
+# Configuration & Secrets
+.env
+
+# Vector Database (Local Storage)
+chroma_db/
+results.txt
+results_ai.txt
+
+# OS
+.DS_Store
+Thumbs.db
