@@ -1,0 +1,7 @@
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "W", "I"] # Error, Failure, Warning, Import Sort
+
+[tool.black]
+line-length = 120
+target-version = ['py312']
